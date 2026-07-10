@@ -10,7 +10,7 @@ const MODULOS = [
   {
     titulo: "Pedidos",
     descricao:
-      "Acompanhamento em tempo real do balcão e do iFood, com filtro por canal e status.",
+      "Acompanhamento em tempo real dos pedidos do balcão, com filtro por status.",
   },
   {
     titulo: "Produtos e Estoque",
