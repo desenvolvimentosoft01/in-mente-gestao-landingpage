@@ -106,9 +106,9 @@ export default function Home() {
           <Image
             src="/logo_inmente.png"
             alt="In Mente Gestão"
-            width={64}
-            height={64}
-            className="h-16 w-16 rounded-lg"
+            width={88}
+            height={88}
+            className="h-20 w-20 rounded-lg md:h-[5.5rem] md:w-[5.5rem]"
             priority
           />
           <nav className="hidden gap-8 text-sm font-medium text-slate-300 md:flex">
