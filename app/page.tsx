@@ -5,7 +5,7 @@ const MODULOS = [
   {
     titulo: "Venda Balcão",
     descricao:
-      "Grade de produtos por categoria, venda por peso ou fração, carrinho e pagamento rápido.",
+      "Grade de produtos por categoria, pedido de venda por peso ou fração, carrinho e registro rápido.",
   },
   {
     titulo: "Pedidos",
