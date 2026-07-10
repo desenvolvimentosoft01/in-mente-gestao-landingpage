@@ -7,9 +7,9 @@ type Props = {
 export default function PlaceholderMidia({ tipo, legenda, className = "" }: Props) {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-8 text-center ${className}`}
+      className={`group flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-slate-700 bg-slate-900/60 p-8 text-center transition duration-300 hover:border-blue-500/60 hover:bg-slate-900 ${className}`}
     >
-      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-200 text-slate-500">
+      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition duration-300 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:text-blue-400">
         {tipo === "video" ? (
           <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7">
             <path d="M8 5v14l11-7-11-7Z" />
@@ -20,10 +20,10 @@ export default function PlaceholderMidia({ tipo, legenda, className = "" }: Prop
           </svg>
         )}
       </div>
-      <p className="text-sm font-medium text-slate-500">
+      <p className="text-sm font-medium text-slate-400">
         {tipo === "video" ? "Vídeo em breve" : "Foto em breve"}
       </p>
-      <p className="text-xs text-slate-400">{legenda}</p>
+      <p className="text-xs text-slate-500">{legenda}</p>
     </div>
   );
 }
