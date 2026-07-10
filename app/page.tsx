@@ -1,8 +1,54 @@
 import Image from "next/image";
 import BotaoWhatsapp from "@/components/BotaoWhatsapp";
-import PlaceholderMidia from "@/components/PlaceholderMidia";
 import Reveal from "@/components/Reveal";
 import MenuMobile from "@/components/MenuMobile";
+import VideoLightbox from "@/components/VideoLightbox";
+import ImageLightbox from "@/components/ImageLightbox";
+
+const DEMOS: {
+  tipo: "video" | "foto";
+  src: string;
+  legenda: string;
+}[] = [
+  { tipo: "foto", src: "/13.png", legenda: "Tela de login" },
+  { tipo: "foto", src: "/1.png", legenda: "Dashboard com resumo do dia" },
+  {
+    tipo: "foto",
+    src: "/3.png",
+    legenda: "Venda balcão: grade de produtos por categoria",
+  },
+  {
+    tipo: "video",
+    src: "/screen-capture (1).webm",
+    legenda: "Venda balcão em ação",
+  },
+  {
+    tipo: "foto",
+    src: "/4.png",
+    legenda: "Finalização de venda com forma de pagamento",
+  },
+  { tipo: "foto", src: "/5.png", legenda: "Detalhe do pedido" },
+  { tipo: "foto", src: "/2.png", legenda: "Histórico de vendas do dia" },
+  { tipo: "foto", src: "/6.png", legenda: "Orçamentos" },
+  { tipo: "foto", src: "/7.png", legenda: "Cadastro de produtos" },
+  { tipo: "foto", src: "/12.png", legenda: "Cadastro de novo produto" },
+  {
+    tipo: "foto",
+    src: "/8.png",
+    legenda: "Estoque com alerta de quantidade mínima",
+  },
+  {
+    tipo: "foto",
+    src: "/9.png",
+    legenda: "Financeiro: contas a pagar e a receber",
+  },
+  {
+    tipo: "foto",
+    src: "/10.png",
+    legenda: "Relatórios de vendas com filtros e gráficos",
+  },
+  { tipo: "foto", src: "/11.png", legenda: "Auditoria completa do sistema" },
+];
 
 const MODULOS = [
   {
@@ -102,11 +148,11 @@ export default function Home() {
             <BotaoWhatsapp texto="Quero conhecer o sistema" />
           </div>
 
-          <div className="animate-fade-in-up delay-400 mt-8 w-full max-w-4xl">
-            <PlaceholderMidia
-              tipo="video"
-              legenda="Vídeo de apresentação geral do sistema"
+          <div className="animate-fade-in-up delay-400 mt-8 w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10">
+            <VideoLightbox
+              src="/screen-capture.webm"
               className="aspect-video w-full"
+              autoPlayPreview
             />
           </div>
         </div>
@@ -153,49 +199,27 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <Reveal delay={0}>
-              <PlaceholderMidia
-                tipo="video"
-                legenda="Venda balcão em funcionamento"
-                className="aspect-video"
-              />
-            </Reveal>
-            <Reveal delay={60}>
-              <PlaceholderMidia
-                tipo="video"
-                legenda="Acompanhamento de pedidos em tempo real"
-                className="aspect-video"
-              />
-            </Reveal>
-            <Reveal delay={120}>
-              <PlaceholderMidia
-                tipo="foto"
-                legenda="Tela de cadastro de produtos"
-                className="aspect-[4/3]"
-              />
-            </Reveal>
-            <Reveal delay={180}>
-              <PlaceholderMidia
-                tipo="foto"
-                legenda="Dashboard com resumo do dia"
-                className="aspect-[4/3]"
-              />
-            </Reveal>
-            <Reveal delay={240}>
-              <PlaceholderMidia
-                tipo="foto"
-                legenda="Relatórios com filtros e impressão"
-                className="aspect-[4/3]"
-              />
-            </Reveal>
-            <Reveal delay={300}>
-              <PlaceholderMidia
-                tipo="foto"
-                legenda="Financeiro: contas a pagar e receber"
-                className="aspect-[4/3]"
-              />
-            </Reveal>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {DEMOS.map((demo, i) => (
+              <Reveal key={demo.src} delay={(i % 6) * 60}>
+                <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 transition duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/10">
+                  <div className="relative aspect-video w-full bg-black">
+                    {demo.tipo === "video" ? (
+                      <VideoLightbox src={demo.src} className="h-full w-full" />
+                    ) : (
+                      <ImageLightbox
+                        src={demo.src}
+                        alt={demo.legenda}
+                        className="h-full w-full"
+                      />
+                    )}
+                  </div>
+                  <p className="px-4 py-3 text-sm text-slate-400">
+                    {demo.legenda}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
