@@ -2,6 +2,7 @@ import Image from "next/image";
 import BotaoWhatsapp from "@/components/BotaoWhatsapp";
 import PlaceholderMidia from "@/components/PlaceholderMidia";
 import Reveal from "@/components/Reveal";
+import MenuMobile from "@/components/MenuMobile";
 
 const MODULOS = [
   {
@@ -51,7 +52,7 @@ export default function Home() {
     <div className="flex flex-1 flex-col bg-slate-950 text-slate-100">
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Image
             src="/logo_inmente.png"
             alt="In Mente Gestão"
@@ -75,6 +76,7 @@ export default function Home() {
             </a>
           </nav>
           <BotaoWhatsapp texto="Falar agora" className="hidden md:inline-flex" />
+          <MenuMobile />
         </div>
       </header>
 
