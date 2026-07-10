@@ -4,6 +4,8 @@ import Reveal from "@/components/Reveal";
 import MenuMobile from "@/components/MenuMobile";
 import VideoLightbox from "@/components/VideoLightbox";
 import ImageLightbox from "@/components/ImageLightbox";
+import BotaoTopo from "@/components/BotaoTopo";
+import ScrollTopoAoAtualizar from "@/components/ScrollTopoAoAtualizar";
 
 const DEMOS: {
   tipo: "video" | "foto";
@@ -96,6 +98,8 @@ const MODULOS = [
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-slate-950 text-slate-100">
+      <ScrollTopoAoAtualizar />
+      <BotaoTopo />
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur">
         <div className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
