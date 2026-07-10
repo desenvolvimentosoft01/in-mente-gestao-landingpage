@@ -20,7 +20,7 @@ const MODULOS = [
   {
     titulo: "Financeiro",
     descricao:
-      "Contas a pagar e a receber, alertas de vencimento e histórico de transações.",
+      "Contas a pagar e a receber, alertas de vencimento e controle financeiro completo.",
   },
   {
     titulo: "Relatórios",
