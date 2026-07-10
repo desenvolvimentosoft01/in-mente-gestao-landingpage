@@ -106,9 +106,9 @@ export default function Home() {
           <Image
             src="/logo_inmente.png"
             alt="In Mente Gestão"
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-lg"
+            width={64}
+            height={64}
+            className="h-16 w-16 rounded-lg"
             priority
           />
           <nav className="hidden gap-8 text-sm font-medium text-slate-300 md:flex">
@@ -250,9 +250,9 @@ export default function Home() {
           <Image
             src="/logo_inmente.png"
             alt="In Mente Gestão"
-            width={32}
-            height={32}
-            className="h-8 w-8 rounded-md opacity-80"
+            width={48}
+            height={48}
+            className="h-12 w-12 rounded-md opacity-80"
           />
           <span>
             © {new Date().getFullYear()} In Mente Gestão. Todos os direitos
