@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "In Mente Gestão — Sistema de Gestão para Restaurantes e Lojas",
+  title: "In Mente Gestão — Sistema de Gestão para Lojas",
   description:
     "Venda balcão, pedidos, estoque, financeiro e relatórios em um só sistema. Conheça o In Mente Gestão e fale com a gente pelo WhatsApp.",
 };

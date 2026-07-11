@@ -141,7 +141,7 @@ export default function Home() {
             Sistema de gestão completo
           </span>
           <h1 className="animate-fade-in-up delay-100 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
-            Gerencie seu restaurante ou loja em um só sistema
+            Gerencie sua loja em um só sistema
           </h1>
           <p className="animate-fade-in-up delay-200 max-w-2xl text-lg text-slate-400 md:text-xl">
             Venda balcão, pedidos, estoque, financeiro e relatórios — tudo em
@@ -170,7 +170,7 @@ export default function Home() {
               Tudo que o seu negócio precisa
             </h2>
             <p className="mt-3 text-lg text-slate-400">
-              Módulos pensados para restaurantes e lojas de varejo em geral.
+              Módulos pensados para lojas de varejo em geral.
             </p>
           </Reveal>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -235,7 +235,7 @@ export default function Home() {
             Feito para o dia a dia do seu negócio
           </h2>
           <p className="text-lg text-slate-400">
-            O In Mente Gestão foi desenvolvido para restaurantes e lojas de
+            O In Mente Gestão foi desenvolvido para lojas de
             varejo que precisam de agilidade na venda, controle de estoque e
             visão financeira clara — sem complicação. Cada cliente tem seu
             próprio ambiente, com dados isolados e seguros.
