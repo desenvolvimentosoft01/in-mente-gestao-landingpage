@@ -89,6 +89,11 @@ const MODULOS = [
       "Cadastro completo com consentimento LGPD e vínculo rápido direto na venda balcão.",
   },
   {
+    titulo: "Orçamentos",
+    descricao:
+      "Monte o orçamento e dispare por e-mail ou WhatsApp com um PDF anexado — o cliente aprova ou recusa direto pelo link, sem precisar responder mensagem.",
+  },
+  {
     titulo: "Dashboard",
     descricao:
       "Resumo do dia, pedidos em andamento e alertas de estoque em um só lugar.",
